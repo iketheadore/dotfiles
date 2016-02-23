@@ -1,7 +1,5 @@
-" Use the Solarized Dark theme
-set background=dark
-colorscheme solarized
-let g:solarized_termtrans=1
+"set background=dark
+colorscheme molokai 
 
 " Make Vim more useful
 set nocompatible
@@ -52,7 +50,7 @@ set tabstop=2
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
 " Highlight searches
-set hlsearch
+"set hlsearch
 " Ignore case of searches
 set ignorecase
 " Highlight dynamically as pattern is typed
@@ -104,3 +102,43 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
+
+" filetype plugin on
+ filetype off
+ set rtp+=~/.vim/bundle/Vundle.vim
+ call vundle#begin()
+ Plugin 'gmarik/Vundle.vim'
+ Plugin 'flazz/vim-colorschemes'
+ Plugin 'vim-scripts/a.vim'
+ Plugin 'scrooloose/nerdcommenter'
+ " Plugin 'fatih/vim-go'
+ Plugin 'sheerun/vim-polyglot'
+ " Plugin 'phildawes/racer.git'
+ Plugin 'tpope/vim-commentary.git'
+ " Plugin 'rust-lang/rust.vim.git'
+ Plugin 'honza/vim-snippets'
+ Plugin 'rizzatti/dash.vim'
+ Plugin 'godlygeek/csapprox'
+ Plugin 'jiangmiao/auto-pairs'
+ " Plugin 'Shougo/neosnippet-snippets'
+ Plugin 'tpope/vim-fugitive'
+ " Plugin 'SirVer/ultisnips'
+ Plugin 'ervandew/supertab'
+ Plugin 'scrooloose/nerdtree'
+ Plugin 'majutsushi/tagbar'
+  Plugin 'gregsexton/gitv'
+  Plugin 'airblade/vim-gitgutter'
+ " Plugin 'Valloric/YouCompleteMe'
+  Plugin 'kien/ctrlp.vim'
+  Plugin 'rking/ag.vim'
+ Plugin 'dyng/ctrlsf.vim'
+ Plugin 'bling/vim-airline'
+ Plugin 'nsf/gocode', {'rtp': 'vim/'}
+ " Plugin 'MarcWeber/vim-addon-mw-utils'
+  Plugin 'tomtom/tlib_vim'
+ " Plugin 'garbas/vim-snipmate'
+  Plugin 'tpope/vim-surround'
+ Plugin 'tpope/vim-repeat'
+
+ call vundle#end()
+ filetype plugin indent on
